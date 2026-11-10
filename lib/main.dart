@@ -9,11 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-
-      home: HomePage(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomePage(),);
   }
 }
 
@@ -23,7 +19,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(backgroundColor: Color(0xff4a3b36)),
+      backgroundColor: Color.//Color(0xfffaf2dd),
+      body: Text(
+        "السلام عليكم",
+        style: TextStyle(
+          color: Color(0xff4a3b36),
+          fontSize: 44,
+          
+          fontWeight: FontWeight.bold,
+        ),
+        textDirection: TextDirection.rtl,
+      ),
     );
   }
 }
