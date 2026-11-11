@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(backgroundColor: Color(0xff4a3b36)),
       backgroundColor: Color(0xfffaf2dd),
       body: Container(
-        height: 100,
+        height: 500,
         width: double.infinity,
         decoration: BoxDecoration(
           color: Color(0xfffaf2dd),
@@ -35,15 +35,11 @@ class HomePage extends StatelessWidget {
         margin: EdgeInsets.all(20),
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
         alignment: Alignment.center,
-        child: Text(
-          "السلام عليكم",
-          style: TextStyle(
-            color: Color(0xff4a3b36),
-            fontSize: 44,
-
-            fontWeight: FontWeight.bold,
-          ),
-          textDirection: TextDirection.rtl,
+        child: Image.asset(
+          "assets/1.png",
+          height: 400,
+          width: 200,
+          fit: BoxFit.cover,
         ),
       ),
     );
