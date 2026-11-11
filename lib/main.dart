@@ -28,9 +28,13 @@ class HomePage extends StatelessWidget {
           color: Color(0xfffaf2dd),
           border: Border.all(color: Color(0xff2a221f), width: 5),
           borderRadius: BorderRadius.all(Radius.circular(20)),
+          boxShadow: [
+            BoxShadow(color: Colors.black, blurRadius: 5, offset: Offset(4, 2)),
+          ],
         ),
         margin: EdgeInsets.all(20),
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+        alignment: Alignment.center,
         child: Text(
           "السلام عليكم",
           style: TextStyle(
