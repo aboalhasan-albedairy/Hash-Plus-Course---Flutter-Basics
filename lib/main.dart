@@ -22,159 +22,233 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(backgroundColor: Color(0xff6e83f6)),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(vertical: 15),
         scrollDirection: Axis.vertical,
         child: Column(
+          spacing: 15,
           children: [
-            Container(
-              alignment: Alignment.center,
-              height: 200,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.redAccent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: EdgeInsets.all(10),
-              child: Text(
-                "كلام غير مهم بس تجربة",
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                spacing: 7,
                 textDirection: TextDirection.rtl,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+                children: [
+                  Text(
+                    "الأصدقاء",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(fontSize: 22),
+                  ),
+                  Icon(Icons.arrow_back_ios_new),
+                ],
               ),
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 200,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.orangeAccent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: EdgeInsets.all(10),
-              child: Text(
-                "كلام غير مهم بس تجربة",
+            SingleChildScrollView(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                spacing: 15,
+
                 textDirection: TextDirection.rtl,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+                children: [
+                  Column(
+                    spacing: 7,
+                    children: [
+                      CircleAvatar(
+                        radius: 50,
+                        backgroundColor: Colors.tealAccent,
+                      ),
+                      Text("محمد"),
+                    ],
+                  ),
+                  Column(
+                    spacing: 7,
+                    children: [
+                      CircleAvatar(
+                        radius: 50,
+                        backgroundColor: Colors.deepPurple,
+                      ),
+                      Text("محمد"),
+                    ],
+                  ),
+                  Column(
+                    spacing: 7,
+                    children: [
+                      CircleAvatar(
+                        radius: 50,
+                        backgroundColor: Colors.deepOrange,
+                      ),
+                      Text("محمد"),
+                    ],
+                  ),
+                  Column(
+                    spacing: 7,
+                    children: [
+                      CircleAvatar(
+                        radius: 50,
+                        backgroundColor: Colors.yellowAccent,
+                      ),
+                      Text("محمد"),
+                    ],
+                  ),
+                  Column(
+                    spacing: 7,
+                    children: [
+                      CircleAvatar(radius: 50, backgroundColor: Colors.red),
+                      Text("محمد"),
+                    ],
+                  ),
+                ],
               ),
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 200,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.yellowAccent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: EdgeInsets.all(10),
-              child: Text(
-                "كلام غير مهم بس تجربة",
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                spacing: 7,
                 textDirection: TextDirection.rtl,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+                children: [
+                  Text(
+                    "استكشف",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(fontSize: 22),
+                  ),
+                  Icon(Icons.arrow_back_ios_new),
+                ],
               ),
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 200,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: EdgeInsets.all(10),
-              child: Text(
-                "كلام غير مهم بس تجربة",
+            SingleChildScrollView(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                spacing: 15,
+
                 textDirection: TextDirection.rtl,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+                children: [
+                  Column(
+                    spacing: 7,
+                    children: [
+                      CircleAvatar(radius: 50, backgroundColor: Colors.red),
+                      Text("محمد"),
+                    ],
+                  ),
+                  Column(
+                    spacing: 7,
+                    children: [
+                      CircleAvatar(radius: 50, backgroundColor: Colors.orange),
+                      Text("محمد"),
+                    ],
+                  ),
+                  Column(
+                    spacing: 7,
+                    children: [
+                      CircleAvatar(radius: 50, backgroundColor: Colors.brown),
+                      Text("محمد"),
+                    ],
+                  ),
+                  Column(
+                    spacing: 7,
+                    children: [
+                      CircleAvatar(
+                        radius: 50,
+                        backgroundColor: Colors.blueAccent,
+                      ),
+                      Text("محمد"),
+                    ],
+                  ),
+                  Column(
+                    spacing: 7,
+                    children: [
+                      CircleAvatar(radius: 50, backgroundColor: Colors.red),
+                      Text("محمد"),
+                    ],
+                  ),
+                ],
               ),
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 200,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.blueAccent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: EdgeInsets.all(10),
-              child: Text(
-                "كلام غير مهم بس تجربة",
+            SingleChildScrollView(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                spacing: 15,
                 textDirection: TextDirection.rtl,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+                children: [
+                  Container(
+                    height: 350,
+                    width: 185,
+                    decoration: BoxDecoration(
+                      color: Colors.pink,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  Container(
+                    height: 350,
+                    width: 185,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                  Container(
+                    height: 350,
+                    width: 185,
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  Container(
+                    height: 350,
+                    width: 185,
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                ],
               ),
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 200,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.indigoAccent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: EdgeInsets.all(10),
-              child: Text(
-                "كلام غير مهم بس تجربة",
+            SingleChildScrollView(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                spacing: 15,
                 textDirection: TextDirection.rtl,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              height: 200,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.purpleAccent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: EdgeInsets.all(10),
-              child: Text(
-                "كلام غير مهم بس تجربة",
-                textDirection: TextDirection.rtl,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              height: 200,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.deepPurpleAccent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: EdgeInsets.all(10),
-              child: Text(
-                "كلام غير مهم بس تجربة",
-                textDirection: TextDirection.rtl,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+                children: [
+                  Container(
+                    height: 350,
+                    width: 185,
+                    decoration: BoxDecoration(
+                      color: Colors.deepOrange,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  Container(
+                    height: 350,
+                    width: 185,
+                    decoration: BoxDecoration(
+                      color: Colors.lightGreen,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                  Container(
+                    height: 350,
+                    width: 185,
+                    decoration: BoxDecoration(
+                      color: Colors.lightBlue,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  Container(
+                    height: 350,
+                    width: 185,
+                    decoration: BoxDecoration(
+                      color: Colors.cyan,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
