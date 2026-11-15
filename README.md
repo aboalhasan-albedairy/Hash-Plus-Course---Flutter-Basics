@@ -1,17 +1,75 @@
-# project_1
+<div align="center">
+  <img src="Hashh-Plus.png" alt="شعار منصة هاش بلس" width="220" />
+  <h1>مختبر تعلم Flutter العملي (Hash Plus)</h1>
+  <p>مستودع تعليمي لتوثيق التطبيقات العملية وتطور الأكواد خطوة بخطوة باستخدام <strong>Git</strong></p>
+</div>
 
-A new Flutter project.
+---
 
-## Getting Started
+## عن هذا المشروع
 
-This project is a starting point for a Flutter application.
+هذا المشروع ليس تطبيقاً واحداً نهائياً، بل هو **مختبر تعليمي وأرشيف عملي** مخصص لتطبيق دروس كورس **Flutter** المقدم من **منصة هاش بلس (Hash Plus)**.
 
-A few resources to get you started if this is your first Flutter project:
+بدلاً من إنشاء مشروع جديد لكل درس أو حذف الأكواد السابقة عند الانتقال لموضوع جديد، يعتمد هذا المستودع على **Git كأداة للتوثيق الزمني للتعلم**؛ بحيث يمثل سجل التعديلات (`Commits`) رحلة التطور خطوة بخطوة، مما يتيح العودة إلى أي درس أو تجربة برمجية سابقة ومراجعتها بسهولة.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## فكرة استخدام Git في التعلم
+
+يتم استخدام **Git** هنا كـ «آلة زمن» برمجية لتحقيق الأهداف التالية:
+
+* **حفظ كل تطبيق عملي كـ Commit مستقل:** عند الانتهاء من تطبيق درس أو مفهوم جديد، يتم حفظ التغييرات برسالة واضحة تصف الدرس أو الفكرة المطبقة.
+* **مقارنة التطور البرمجي:** استخدام أوامر مثل `git log` و `git diff` لمراجعة كيفية تغير الكود وتطوره من أساسيات الواجهات إلى المفاهيم المتقدمة.
+* **تجربة الأفكار بحرية:** إمكانية إنشاء فروع (`Branches`) لتجربة حلول أو تصاميم مختلفة دون التأثير على المسار الأساسي للدروس.
+* **مرجع شخصي سريع:** تحويل سجل المشروع إلى مكتبة أمثلة عملية جاهزة للرجوع إليها في المشاريع المستقبلية.
+
+---
+
+## كيفية استعراض الدروس السابقة
+
+إذا كنت تتصفح هذا المستودع وتريد استكشاف التطبيقات السابقة لكل درس، يمكنك اتباع الخطوات التالية:
+
+1. **استنساخ المستودع (Clone):**
+   ```bash
+   git clone <رابط-المستودع-الخاص-بك>
+   cd <اسم-مجلد-المشروع>
+   ```
+
+2. **عرض سجل الدروس والتطبيقات (`Commits`):**
+   ```bash
+   git log --oneline
+   ```
+
+3. **الانتقال إلى درس معين لمراجعة كوده وتشغيله:**
+   ```bash
+   git checkout <commit-hash>
+   flutter pub get
+   flutter run
+   ```
+
+4. **العودة إلى أحدث نسخة:**
+   ```bash
+   git checkout main
+   ```
+
+---
+
+## سجل الدروس والتطبيقات (Learning Log)
+
+> *يمكنك تحديث هذا الجدول باستمرار مع تقدمك في الكورس ليكون فهرساً سريعاً للمستودع:*
+
+| الدرس / المرحلة | الموضوع البرمجي | ملاحظات سريعة |
+| :--- | :--- | :--- |
+| **المرحلة 01** | أساسيات Dart وبناء المشروع الأول | التعرف على هيكل مشروع Flutter |
+| **المرحلة 02** | الـ Widgets الأساسية والتخطيط (Layouts) | استخدام `Column`, `Row`, `Container` |
+| **المرحلة 03** | التفاعل وإدارة الحالة (State Management) | التعامل مع `StatefulWidget` والأزرار |
+| **المرحلة 04** | القوائم والتنقل بين الصفحات | `ListView` و `Navigator` |
+
+---
+
+## التقنيات والأدوات المستخدمة
+
+* **Framework:** Flutter
+* **Language:** Dart
+* **Version Control:** Git & GitHub
+* **المصدر التعليمي:** كورس Flutter — [منصة هاش بلس (Hash Plus)](https://learn.ihashplus.com/platform/course/%D8%A7%D8%AD%D8%AA%D8%B1%D9%81-flutter-%D9%85%D9%86-%D8%A7%D9%84%D8%B5%D9%81%D8%B1-%D8%A7%D9%84%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A-%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84-%D9%84%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA-android-%D9%88-ios)
