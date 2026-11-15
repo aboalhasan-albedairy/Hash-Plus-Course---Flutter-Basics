@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="Hashh-Plus.png" alt="شعار منصة هاش بلس" width="220" />
+  <img src="assets\Hashh-Plus.png" alt="شعار منصة هاش بلس" width="220" />
   <h1>مختبر تعلم Flutter العملي (Hash Plus)</h1>
   <p>مستودع تعليمي لتوثيق التطبيقات العملية وتطور الأكواد خطوة بخطوة باستخدام <strong>Git</strong></p>
 </div>
