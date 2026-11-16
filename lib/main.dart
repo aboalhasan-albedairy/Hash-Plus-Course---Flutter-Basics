@@ -24,24 +24,18 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(backgroundColor: Color(0xff6e83f6)),
       backgroundColor: Colors.white,
       body: Center(
-        child: ElevatedButton.icon(
+        child: MaterialButton(
+          color: Color(0xff6e83f6),
+          padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+          splashColor: Color(0xff3caf82),
+          elevation: 5,
+
           onPressed: () {
-            log("Clicked");
-          },
-          onLongPress: () {
-            log("Long Press Here");
+            log("تسجيل الدخول");
           },
 
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.deepPurple,
-            elevation: 5,
-            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
-            side: BorderSide(color: Colors.purpleAccent),
-          ),
-          icon: Icon(Icons.code, color: Colors.white, size: 35),
-          label: Text(
-            "Code Here!",
-
+          child: Text(
+            "تسجيل الدخول",
             style: TextStyle(
               color: Colors.white,
               fontSize: 20,
