@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(backgroundColor: Color(0xff6e83f6)),
       backgroundColor: Colors.white,
       body: Center(
-        child: ElevatedButton(
+        child: ElevatedButton.icon(
           onPressed: () {
             log("Clicked");
           },
@@ -38,8 +38,9 @@ class HomePage extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
             side: BorderSide(color: Colors.purpleAccent),
           ),
-          child: Text(
-            "Click Here!",
+          icon: Icon(Icons.code, color: Colors.white, size: 35),
+          label: Text(
+            "Code Here!",
 
             style: TextStyle(
               color: Colors.white,
