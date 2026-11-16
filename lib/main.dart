@@ -23,51 +23,30 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(backgroundColor: Color(0xff6e83f6)),
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              height: 200,
-              margin: EdgeInsets.all(15),
-              color: Colors.tealAccent,
-            ),
-            Container(
-              height: 200,
-              margin: EdgeInsets.all(15),
-              color: Colors.tealAccent,
-            ),
-            Container(
-              height: 200,
-              margin: EdgeInsets.all(15),
-              color: Colors.tealAccent,
-            ),
-            Container(
-              height: 200,
-              margin: EdgeInsets.all(15),
-              color: Colors.tealAccent,
-            ),
-            Container(
-              height: 200,
-              margin: EdgeInsets.all(15),
-              color: Colors.tealAccent,
-            ),
-            Container(
-              height: 200,
-              margin: EdgeInsets.all(15),
-              color: Colors.tealAccent,
-            ),
-          ],
+      body: Center(
+        child: GestureDetector(
+          onTap: () {
+            log("on Tap");
+          },
+          onTapDown: (details) {
+            log("on tap down");
+          },
+          onTapUp: (details) {
+            log("On Tap Up");
+          },
+          onTapCancel: () {
+            log("on Tab Cancel");
+          },
+          onDoubleTap: () {
+            log("On Double Tap");
+          },
+          onLongPress: () {
+            log("on Long Press");
+          },
+          
+          child: Container(height: 200, width: 300, color: Color(0xff6e83f6)),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-
-        foregroundColor: Colors.white,
-        backgroundColor: Color(0xff6e83f6),
-        splashColor: Colors.teal,
-        child: Icon(Icons.chat_sharp),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
