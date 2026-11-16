@@ -23,38 +23,51 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(backgroundColor: Color(0xff6e83f6)),
       backgroundColor: Colors.white,
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
-          spacing: 20,
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton( 
-              
-              style: TextButton.styleFrom(
-                backgroundColor: Color(0xff6e83f6),
-                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
-                elevation: 5,
-                shadowColor: Colors.black,
-                foregroundColor: Colors.white,
-                textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              onPressed: () {},
-              child: Text("تسجيل الدخول"),
+            Container(
+              height: 200,
+              margin: EdgeInsets.all(15),
+              color: Colors.tealAccent,
             ),
-            IconButton(
-              style: IconButton.styleFrom(
-                backgroundColor: Color(0xff6e83f6),
-                foregroundColor: Colors.white,
-                iconSize: 40,
-                elevation: 5,
-                shadowColor: Colors.black,
-              ),
-              onPressed: () {},
-              icon: Icon(Icons.settings),
+            Container(
+              height: 200,
+              margin: EdgeInsets.all(15),
+              color: Colors.tealAccent,
+            ),
+            Container(
+              height: 200,
+              margin: EdgeInsets.all(15),
+              color: Colors.tealAccent,
+            ),
+            Container(
+              height: 200,
+              margin: EdgeInsets.all(15),
+              color: Colors.tealAccent,
+            ),
+            Container(
+              height: 200,
+              margin: EdgeInsets.all(15),
+              color: Colors.tealAccent,
+            ),
+            Container(
+              height: 200,
+              margin: EdgeInsets.all(15),
+              color: Colors.tealAccent,
             ),
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+
+        foregroundColor: Colors.white,
+        backgroundColor: Color(0xff6e83f6),
+        splashColor: Colors.teal,
+        child: Icon(Icons.chat_sharp),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
