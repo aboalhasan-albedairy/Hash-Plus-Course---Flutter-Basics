@@ -24,24 +24,35 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(backgroundColor: Color(0xff6e83f6)),
       backgroundColor: Colors.white,
       body: Center(
-        child: MaterialButton(
-          color: Color(0xff6e83f6),
-          padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
-          splashColor: Color(0xff3caf82),
-          elevation: 5,
-
-          onPressed: () {
-            log("تسجيل الدخول");
-          },
-
-          child: Text(
-            "تسجيل الدخول",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+        child: Column(
+          spacing: 20,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton( 
+              
+              style: TextButton.styleFrom(
+                backgroundColor: Color(0xff6e83f6),
+                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                elevation: 5,
+                shadowColor: Colors.black,
+                foregroundColor: Colors.white,
+                textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              onPressed: () {},
+              child: Text("تسجيل الدخول"),
             ),
-          ),
+            IconButton(
+              style: IconButton.styleFrom(
+                backgroundColor: Color(0xff6e83f6),
+                foregroundColor: Colors.white,
+                iconSize: 40,
+                elevation: 5,
+                shadowColor: Colors.black,
+              ),
+              onPressed: () {},
+              icon: Icon(Icons.settings),
+            ),
+          ],
         ),
       ),
     );
