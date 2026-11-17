@@ -23,56 +23,95 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var backgroundColor = Colors.white;
-  var primaryColor = Color(0xff6e83f6);
+  var containerTopLeftColor = Colors.blue;
+  var containerTopRightColor = Colors.purple;
+  var containerBottomLeftColor = Colors.orange;
+  var containerBottomRightColor = Colors.green;
+
   var label = "Light Mode";
   var iconColor = Color(0xFFFFEB3B);
   var icon = Icons.light_mode;
 
   @override
-  void initState() {
-    log("Welcome to Light mode");
-
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
-      appBar: AppBar(backgroundColor: primaryColor),
+      backgroundColor: Colors.white,
+      appBar: AppBar(backgroundColor: Colors.deepPurple),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 100,
+          spacing: 30,
           children: [
-            Icon(icon, color: iconColor, size: 150),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: primaryColor,
-                foregroundColor: Colors.white,
-                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+            Column(
+              spacing: 15,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  spacing: 15,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 115,
+                      width: 125,
+                      decoration: BoxDecoration(
+                        color: containerTopLeftColor,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                    Container(
+                      height: 115,
+                      width: 125,
+                      decoration: BoxDecoration(
+                        color: containerTopRightColor,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  spacing: 15,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 115,
+                      width: 125,
+                      decoration: BoxDecoration(
+                        color: containerBottomLeftColor,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                    Container(
+                      height: 115,
+                      width: 125,
+                      decoration: BoxDecoration(
+                        color: containerBottomRightColor,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+
+            MaterialButton(
+              textColor: Colors.white,
+              padding: EdgeInsets.symmetric(vertical: 12.5, horizontal: 145),
+              color: Colors.deepPurple,
+              shape: ContinuousRectangleBorder(
+                borderRadius: BorderRadiusGeometry.circular(30),
               ),
+
               onPressed: () {
                 setState(() {
-                  if (label == "Light Mode") {
-                    backgroundColor = Color(0xff171c30);
-                    primaryColor = Color(0xff262d47);
-                    icon = Icons.dark_mode;
-                    iconColor = Colors.white;
-                    label = "Dark Mode";
-                  } else {
-                    backgroundColor = Colors.white;
-                    primaryColor = Color(0xff6e83f6);
-                    icon = Icons.light_mode;
-                    iconColor = Colors.yellow;
-                    label = "Light Mode";
-                  }
+                  containerTopLeftColor = Colors.red;
+                  containerTopRightColor = Colors.green;
+                  containerBottomLeftColor = Colors.blue;
+                  containerBottomRightColor = Colors.purple;
                 });
               },
               child: Text(
-                label,
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                "تغيير الألوان",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),
           ],
