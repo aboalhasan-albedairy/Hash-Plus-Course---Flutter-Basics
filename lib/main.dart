@@ -1,4 +1,4 @@
-// import 'dart:developer'; // for using log();
+import 'dart:developer'; // for using log();
 
 import 'package:flutter/material.dart';
 
@@ -28,6 +28,13 @@ class _HomePageState extends State<HomePage> {
   var label = "Light Mode";
   var iconColor = Color(0xFFFFEB3B);
   var icon = Icons.light_mode;
+
+  @override
+  void initState() {
+    log("Welcome to Light mode");
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
