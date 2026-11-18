@@ -25,31 +25,18 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(backgroundColor: Colors.deepPurple),
-      body: ListView.builder(
-        physics: BouncingScrollPhysics(),
-        scrollDirection: Axis.vertical,
-        itemCount: 7,
-        itemBuilder: (context, index) {
-          return Container(
-            margin: EdgeInsets.all(10),
-            height: 300,
-            decoration: BoxDecoration(
-              color: Colors.teal,
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: Center(
-              child: Text(
-                "Container ${index + 1}",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          );
-        },
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurpleAccent,
+        foregroundColor: Colors.white,
+        title: Text("Home Page"),
+        centerTitle: true,
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.info)),
+        ],
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
+        shadowColor: Colors.deepPurple,
+        elevation: 7,
       ),
     );
   }
