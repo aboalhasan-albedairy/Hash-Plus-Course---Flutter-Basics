@@ -26,52 +26,30 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(backgroundColor: Colors.deepPurple),
-      body: ListView(
-        reverse: true,
+      body: ListView.builder(
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,
-        children: [
-          Container(
+        itemCount: 7,
+        itemBuilder: (context, index) {
+          return Container(
             margin: EdgeInsets.all(10),
             height: 300,
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Colors.teal,
               borderRadius: BorderRadius.circular(15),
             ),
-          ),
-          Container(
-            margin: EdgeInsets.all(10),
-            height: 300,
-            decoration: BoxDecoration(
-              color: Colors.green,
-              borderRadius: BorderRadius.circular(15),
+            child: Center(
+              child: Text(
+                "Container ${index + 1}",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-          ),
-          Container(
-            margin: EdgeInsets.all(10),
-            height: 300,
-            decoration: BoxDecoration(
-              color: Colors.yellow,
-              borderRadius: BorderRadius.circular(15),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.all(10),
-            height: 300,
-            decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(15),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.all(10),
-            height: 300,
-            decoration: BoxDecoration(
-              color: Colors.purple,
-              borderRadius: BorderRadius.circular(15),
-            ),
-          ),
-        ],
+          );
+        },
       ),
     );
   }
