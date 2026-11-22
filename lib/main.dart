@@ -12,7 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: MainPage());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MainPage(),
+      routes: {
+        "HomePage": (context) => HomePage(),
+        "ProfilePage": (context) => ProfilePage(),
+        "SettingsPage": (context) => SettingsPage(),
+      },
+    );
   }
 }
 
@@ -24,41 +32,39 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int currentIndex = 0;
-  List<Widget> pages = [HomePage(), ProfilePage(), SettingsPage()];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(backgroundColor: Colors.deepPurpleAccent),
 
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.deepPurpleAccent,
-        selectedItemColor: Colors.white,
-        iconSize: 35,
-
-        selectedLabelStyle: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 16,
+      body: Center(
+        child: Column(
+          spacing: 25,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              
+              onPressed: () {
+                Navigator.of(context).pushNamed("HomePage");
+              },
+              child: Text("Home Page"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed("ProfilePage");
+              },
+              child: Text("Profile Page"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed("SettingsPage");
+              },
+              child: Text("Settings Page"),
+            ),
+          ],
         ),
-
-        currentIndex: currentIndex,
-        onTap: (value) {
-          setState(() {
-            currentIndex = value;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: "Settings",
-          ),
-        ],
       ),
-      body: pages[currentIndex],
     );
   }
 }
