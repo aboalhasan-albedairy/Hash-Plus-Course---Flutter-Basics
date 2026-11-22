@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      home: Directionality(textDirection: TextDirection.rtl, child: MainPage()),
       routes: {
         "HomePage": (context) => HomePage(),
         "ProfilePage": (context) => ProfilePage(),
@@ -39,28 +39,27 @@ class _MainPageState extends State<MainPage> {
       appBar: AppBar(backgroundColor: Colors.deepPurpleAccent),
 
       body: Center(
-        child: Column(
-          spacing: 25,
+        child: Row(
+          spacing: 15,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              
               onPressed: () {
                 Navigator.of(context).pushNamed("HomePage");
               },
-              child: Text("Home Page"),
+              child: Text("الصفحة الرئيسية"),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed("ProfilePage");
               },
-              child: Text("Profile Page"),
+              child: Text("صفحة البروفايل"),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed("SettingsPage");
               },
-              child: Text("Settings Page"),
+              child: Text("صفحة الإعدادات"),
             ),
           ],
         ),
