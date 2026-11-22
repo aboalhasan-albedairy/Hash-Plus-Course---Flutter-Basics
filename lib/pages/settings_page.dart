@@ -14,22 +14,35 @@ class SettingsPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Container(
-          height: 200,
-          width: 350,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: Colors.deepPurpleAccent,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Text(
-            "Settings Page",
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
-              color: const Color.fromARGB(255, 245, 240, 253),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 20,
+          children: [
+            Container(
+              height: 200,
+              width: 350,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Colors.deepPurpleAccent,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Text(
+                "Settings Page",
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: const Color.fromARGB(255, 245, 240, 253),
+                ),
+              ),
             ),
-          ),
+            ElevatedButton(
+              
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text("Back To Main Page"),
+            ),
+          ],
         ),
       ),
     );
