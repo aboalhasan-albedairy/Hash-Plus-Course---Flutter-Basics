@@ -39,6 +39,7 @@ class _MainPageState extends State<MainPage> {
       appBar: AppBar(backgroundColor: Colors.deepPurpleAccent),
 
       body: Container(
+        margin: EdgeInsets.all(20),
         child: TextFormField(
           decoration: InputDecoration(
             labelText: "اسم المستخدم",
@@ -53,6 +54,29 @@ class _MainPageState extends State<MainPage> {
 
             filled: true,
             fillColor: Colors.deepPurpleAccent.withValues(alpha: 0.1),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20),
+              borderSide: BorderSide(color: Colors.black),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20),
+              borderSide: BorderSide(color: Colors.black),
+            ),
+
+            disabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20),
+              borderSide: BorderSide(color: Colors.grey),
+            ),
+
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20),
+              borderSide: BorderSide(color: Colors.deepPurple, width: 4),
+            ),
+
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20),
+              borderSide: BorderSide(color: Colors.red),
+            ),
           ),
         ),
       ),
