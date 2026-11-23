@@ -41,6 +41,12 @@ class _MainPageState extends State<MainPage> {
       body: Container(
         margin: EdgeInsets.all(20),
         child: TextFormField(
+          minLines: 2,
+          maxLines: 3,
+          maxLength: 30,
+          cursorColor: Colors.indigo,
+          initialValue: "شيكو",
+          keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
             labelText: "اسم المستخدم",
             labelStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
