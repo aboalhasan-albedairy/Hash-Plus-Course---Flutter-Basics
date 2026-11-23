@@ -38,30 +38,22 @@ class _MainPageState extends State<MainPage> {
       backgroundColor: Colors.white,
       appBar: AppBar(backgroundColor: Colors.deepPurpleAccent),
 
-      body: Center(
-        child: Row(
-          spacing: 15,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed("HomePage");
-              },
-              child: Text("الصفحة الرئيسية"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed("ProfilePage");
-              },
-              child: Text("صفحة البروفايل"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed("SettingsPage");
-              },
-              child: Text("صفحة الإعدادات"),
-            ),
-          ],
+      body: Container(
+        child: TextFormField(
+          decoration: InputDecoration(
+            labelText: "اسم المستخدم",
+            labelStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+
+            hintText: "أدخل اسم المستخدم",
+            hintStyle: TextStyle(color: Colors.grey),
+
+            prefixIcon: Icon(Icons.person, size: 30),
+
+            suffixIcon: Icon(Icons.circle_outlined),
+
+            filled: true,
+            fillColor: Colors.deepPurpleAccent.withValues(alpha: 0.1),
+          ),
         ),
       ),
     );
