@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:project_1/pages/home_page.dart';
 import 'package:project_1/pages/profile_page.dart';
@@ -32,59 +34,79 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  var name = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(backgroundColor: Colors.deepPurpleAccent),
 
-      body: Container(
-        margin: EdgeInsets.all(20),
-        child: TextFormField(
-          minLines: 2,
-          maxLines: 3,
-          maxLength: 30,
-          cursorColor: Colors.indigo,
-          initialValue: "شيكو",
-          keyboardType: TextInputType.emailAddress,
-          decoration: InputDecoration(
-            labelText: "اسم المستخدم",
-            labelStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            margin: EdgeInsets.all(20),
+            child: TextFormField(
+              onTap: () {
+                log("on Tap");
+              },
+              onChanged: (value) {
+                setState(() {
+                  name = value;
+                });
+              },
 
-            hintText: "أدخل اسم المستخدم",
-            hintStyle: TextStyle(color: Colors.grey),
+              minLines: 2,
+              maxLines: 3,
+              maxLength: 30,
+              cursorColor: Colors.indigo,
+              initialValue: "هاش بلس",
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                labelText: "اسم المستخدم",
+                labelStyle: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
 
-            prefixIcon: Icon(Icons.person, size: 30),
+                hintText: "أدخل اسم المستخدم",
+                hintStyle: TextStyle(color: Colors.grey),
 
-            suffixIcon: Icon(Icons.circle_outlined),
+                prefixIcon: Icon(Icons.person, size: 30),
 
-            filled: true,
-            fillColor: Colors.deepPurpleAccent.withValues(alpha: 0.1),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.black),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.black),
-            ),
+                suffixIcon: Icon(Icons.circle_outlined),
 
-            disabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.grey),
-            ),
+                filled: true,
+                fillColor: Colors.deepPurpleAccent.withValues(alpha: 0.1),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  borderSide: BorderSide(color: Colors.black),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  borderSide: BorderSide(color: Colors.black),
+                ),
 
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.deepPurple, width: 4),
-            ),
+                disabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
 
-            errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.red),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  borderSide: BorderSide(color: Colors.deepPurple, width: 4),
+                ),
+
+                errorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  borderSide: BorderSide(color: Colors.red),
+                ),
+              ),
             ),
           ),
-        ),
+          Text("$name", style: TextStyle(fontSize: 20)),
+        ],
       ),
     );
   }
